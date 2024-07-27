@@ -88,7 +88,32 @@ const subjects = [
   };
 
 
-createMessage();
+  const readline = require('readline');
 
+  // Function to handle user input and call `createMessage` if 'G' is entered
+  function inputFunc() {
+      const rl = readline.createInterface({
+          input: process.stdin,
+          output: process.stdout
+      });
+  
+      rl.question('Type G to generate message: ', (answer) => {
+          if (answer === 'G') {
+              createMessage();
+              
+              rl.close(); // Close the readline interface after processing
+          } else {
+              console.log('ERROR: Invalid input. Please try again.');
+              rl.close(); // Close the readline interface before recursive call
+              inputFunc(); // Re-prompt the user
+          }
+      });
+  }
+  
+ 
+  
+  // Call inputFunc to start the process
+  inputFunc();
+  
 
 
