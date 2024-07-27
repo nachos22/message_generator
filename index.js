@@ -80,9 +80,9 @@ const subjects = [
   
   function createMessage() {
 
-    let subj = subjects[Math.floor(Math.random()*100)];
-    let verb = verbs[Math.floor(Math.random()*100)];
-    let obj = objects[Math.floor(Math.random()*100)];
+    let subj = subjects[Math.floor(Math.random()*subjects.length)];
+    let verb = verbs[Math.floor(Math.random()*verbs.length)];
+    let obj = objects[Math.floor(Math.random()*objects.length)];
 
     console.log(`${subj} ${verb} ${obj}.`)
   };
