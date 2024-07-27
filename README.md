@@ -1,7 +1,7 @@
 # message_generator
 
 
-##A simple game to display a random message.
+## A simple game to display a random message.
 
 *Used AI to come up with random data for message*
 
